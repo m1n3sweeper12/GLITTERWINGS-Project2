@@ -36,6 +36,17 @@
   "name":"INF123Project2-GLITTERWINGS",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+<<<<<<< Updated upstream
+=======
+    {"id":{"name":"spr_Experiment","path":"sprites/spr_Experiment/spr_Experiment.yy",},},
+    {"id":{"name":"spr_Fighter","path":"sprites/spr_Fighter/spr_Fighter.yy",},},
+    {"id":{"name":"spr_Ranger","path":"sprites/spr_Ranger/spr_Ranger.yy",},},
+    {"id":{"name":"spr_Rogue","path":"sprites/spr_Rogue/spr_Rogue.yy",},},
+    {"id":{"name":"spr_Tileset_PLACEHOLDER","path":"sprites/spr_Tileset_PLACEHOLDER/spr_Tileset_PLACEHOLDER.yy",},},
+    {"id":{"name":"spr_Wall","path":"sprites/spr_Wall/spr_Wall.yy",},},
+    {"id":{"name":"spr_Wizard","path":"sprites/spr_Wizard/spr_Wizard.yy",},},
+    {"id":{"name":"tileset_stone_brick","path":"tilesets/tileset_stone_brick/tileset_stone_brick.yy",},},
+>>>>>>> Stashed changes
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
