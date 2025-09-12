@@ -7,7 +7,8 @@ var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
 // Collision with wall
-move_and_collide(_hor * walk_speed, _ver * walk_speed, obj_Wall, 5, 0, 0, walk_speed, walk_speed);
+var tilemap = layer_tilemap_get_id("Tiles_1")
+move_and_collide(_hor * walk_speed, _ver * walk_speed, tilemap, 5, 0, 0, walk_speed, walk_speed);
 
 if (_hor != 0 or _ver != 0)
 {
