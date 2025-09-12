@@ -40,7 +40,7 @@
     {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},
     {"id":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"spr_Experement","path":"sprites/spr_Experement/spr_Experement.yy",},},
+    {"id":{"name":"spr_Experiment","path":"sprites/spr_Experiment/spr_Experiment.yy",},},
     {"id":{"name":"spr_Fighter","path":"sprites/spr_Fighter/spr_Fighter.yy",},},
     {"id":{"name":"spr_Ranger","path":"sprites/spr_Ranger/spr_Ranger.yy",},},
     {"id":{"name":"spr_Rogue","path":"sprites/spr_Rogue/spr_Rogue.yy",},},

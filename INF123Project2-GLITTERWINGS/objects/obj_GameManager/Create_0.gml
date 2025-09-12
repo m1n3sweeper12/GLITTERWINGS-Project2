@@ -38,7 +38,7 @@ switch(character)
 
 	default:
 	with(obj_Player) {
-		sprite_index = spr_Experement;
+		sprite_index = spr_Experiment;
 		image_index = 0;
 		}
 	break;
