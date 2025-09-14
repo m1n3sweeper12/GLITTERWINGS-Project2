@@ -6,8 +6,8 @@
   "name":"obj_Wall",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Envirnment",
+    "path":"folders/Objects/Envirnment.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,5 +32,5 @@
     "path":"sprites/spr_Wall/spr_Wall.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
