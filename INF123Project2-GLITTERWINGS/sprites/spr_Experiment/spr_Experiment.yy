@@ -44,8 +44,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"CharacterSprites",
-    "path":"folders/Sprites/CharacterSprites.yy",
+    "name":"Characters",
+    "path":"folders/Sprites/Characters.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
