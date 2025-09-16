@@ -60,7 +60,6 @@
     {"id":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},},
     {"id":{"name":"obj_WizardProjectile","path":"objects/obj_WizardProjectile/obj_WizardProjectile.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"spr_Armor_East","path":"sprites/spr_Armor_East/spr_Armor_East.yy",},},
     {"id":{"name":"spr_Armor_North","path":"sprites/spr_Armor_North/spr_Armor_North.yy",},},
     {"id":{"name":"spr_Armor_NorthEast","path":"sprites/spr_Armor_NorthEast/spr_Armor_NorthEast.yy",},},
@@ -114,7 +113,6 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
