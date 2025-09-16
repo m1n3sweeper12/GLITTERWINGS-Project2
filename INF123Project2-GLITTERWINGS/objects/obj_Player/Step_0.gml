@@ -7,26 +7,27 @@ var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
 // Collision with wall
-move_and_collide(_hor * walk_speed, _ver * walk_speed, obj_Wall, 5, 0, 0, walk_speed, walk_speed);
+var tilemap = layer_tilemap_get_id("Tiles_1")
+move_and_collide(_hor * walk_speed, _ver * walk_speed, tilemap, 5, 0, 0, walk_speed, walk_speed);
 
 if (_hor != 0 or _ver != 0)
 {
 	// Sprite rotation based on movement direction
-	if (_ver < 0) and (_hor < 0) { sprite_index = spriteNorthWest; } // Moving North West
+	if (_ver < 0) and (_hor < 0) { sprite_index = spriteNorthWest; direction = 135;} // Moving North West
 	
-	else if (_ver < 0) and (_hor > 0) { sprite_index = spriteNorthEast; } // Moving North East
+	else if (_ver < 0) and (_hor > 0) { sprite_index = spriteNorthEast; direction = 45;} // Moving North East
 
-	else if (_ver > 0) and (_hor < 0) { sprite_index = spriteSouthWest; } // Moving South West
+	else if (_ver > 0) and (_hor < 0) { sprite_index = spriteSouthWest; direction = 225;} // Moving South West
 	
-	else if (_ver > 0) and (_hor > 0) { sprite_index = spriteSouthEast; } // Moving South East
+	else if (_ver > 0) and (_hor > 0) { sprite_index = spriteSouthEast; direction = 315;} // Moving South East
 	
-	else if (_ver < 0) and (_hor = 0) { sprite_index = spriteNorth; } // Moving North
+	else if (_ver < 0) and (_hor = 0) { sprite_index = spriteNorth; direction = 90;} // Moving North
 	
-	else if (_ver > 0) and (_hor = 0) { sprite_index = spriteSouth; } // Moving South
+	else if (_ver > 0) and (_hor = 0) { sprite_index = spriteSouth; direction = 270} // Moving South
 	
-	else if (_ver = 0) and (_hor > 0) { sprite_index = spriteEast; } // Moving East
+	else if (_ver = 0) and (_hor > 0) { sprite_index = spriteEast; direction = 0;} // Moving East
 	
-	else if (_ver = 0) and (_hor < 0) { sprite_index = spriteWest; } // Moving West
+	else if (_ver = 0) and (_hor < 0) { sprite_index = spriteWest; direction = 180;} // Moving West
 }
 
 //--------------------------------------------------------
