@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Experiment",
-    "path":"sprites/spr_Experiment/spr_Experiment.yy",
+    "name":"spr_Raccoon_South",
+    "path":"sprites/spr_Raccoon_South/spr_Raccoon_South.yy",
   },
   "spriteMaskId":null,
   "visible":true,
