@@ -12,7 +12,7 @@ move_and_collide(_hor * walk_speed, _ver * walk_speed, tilemap, 5, 0, 0, walk_sp
 
 if (_hor != 0 or _ver != 0)
 {
-	// Sprite rotation based on movement direction
+	// Sprite based on movement direction
 	if (_ver < 0) and (_hor < 0) { sprite_index = spriteNorthWest; direction = 135;} // Moving North West
 	
 	else if (_ver < 0) and (_hor > 0) { sprite_index = spriteNorthEast; direction = 45;} // Moving North East
@@ -35,25 +35,31 @@ if (_hor != 0 or _ver != 0)
 // Switches between melee and ranged, using right click to change between the two. Feel free to change the control if need be.
 if (mouse_check_button_pressed(mb_right))
 {
-	if(using_melee = true) 
-	
-		{ using_melee = false; }
+	if(using_melee = true) // Change from melee to ranged.
+		{
+		using_melee = false;
+		//instance_create_layer(x + 0, y + 0, "Instances", obj_Pointer_Ranged);
+		//with(obj_Pointer_Melee) instance_destroy();
+		}
 		
-	else if (using_melee = false)
-	
-		{ using_melee = true; }
+	else if (using_melee = false) // Change from ranged to melee.
+		{
+		using_melee = true;
+		//instance_create_layer(x + 0, y + 0, "Instances", obj_Pointer_Melee);
+		//with(obj_Pointer_Ranged) instance_destroy();
+		}
 }
 
-// If you left click, it uses the attack. The attack functions are stored in the Create event. Feel free to change the control if need be.
+// Actually using the attacks
 if (mouse_check_button_pressed(mb_left))
 {
-	if (using_melee = true)
+	if(obj_Player.using_melee = true) // Melee Attacks
 	{
-		MeleeAttack();
-	}
-	else if (using_melee = false)
-	{
-		RangedAttack();
+		MeleeAttack()
 	}
 	
+	else if (obj_Player.using_melee = false) // Ranged Attacks
+	{
+		RangedAttack()
+	}
 }

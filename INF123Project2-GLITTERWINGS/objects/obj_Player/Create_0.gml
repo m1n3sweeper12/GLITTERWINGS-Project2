@@ -9,24 +9,21 @@ melee_reach = 1;
 melee_damage = 1;
 
 ranged_speed = 1;
-ranged_reach = 1;
-ranged_damage = 1;
+ranged_reach = 8; // How far you can shoot.
+ranged_damage = 10;
 
 // Simple Setup
 
 using_melee = true; //sets the attack type. true = using melee, false = using ranged.
 
 
-// Melee attack should go here.
-function MeleeAttack() 
+function MeleeAttack()
 {
-	// code here.
+	//Code here
 }
 
-// Ranged attack should go here.
-function RangedAttack() 
+function RangedAttack()
 {
-	// code here.
+	instance_create_layer(x + 0, y + 0, "Instances", obj_Projectile_Parent);
 }
-
 

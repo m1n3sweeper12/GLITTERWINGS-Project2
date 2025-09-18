@@ -28,3 +28,8 @@ if (_hor != 0 or _ver != 0)
 }
 
 move_and_collide(_hor*walk_speed, _ver*walk_speed, [obj_Wall,obj_EnemyParent], 4, 0, 0, walk_speed, walk_speed);
+
+if (cur_health_points <= 0)
+{
+	instance_destroy();
+}
