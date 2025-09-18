@@ -38,6 +38,7 @@ if (mouse_check_button_pressed(mb_right))
 	if(using_melee = true) // Change from melee to ranged.
 		{
 		using_melee = false;
+		with(obj_Pointer_Melee) instance_destroy();
 		//instance_create_layer(x + 0, y + 0, "Instances", obj_Pointer_Ranged);
 		//with(obj_Pointer_Melee) instance_destroy();
 		}
@@ -45,6 +46,7 @@ if (mouse_check_button_pressed(mb_right))
 	else if (using_melee = false) // Change from ranged to melee.
 		{
 		using_melee = true;
+		instance_create_layer(x + 0, y + 0, "Instances", obj_Pointer_Melee);
 		//instance_create_layer(x + 0, y + 0, "Instances", obj_Pointer_Melee);
 		//with(obj_Pointer_Ranged) instance_destroy();
 		}

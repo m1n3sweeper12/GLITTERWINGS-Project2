@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Firebolt",
-    "path":"sprites/spr_Firebolt/spr_Firebolt.yy",
+    "name":"spr_WizardProjectile",
+    "path":"sprites/spr_WizardProjectile/spr_WizardProjectile.yy",
   },
   "spriteMaskId":null,
   "visible":true,

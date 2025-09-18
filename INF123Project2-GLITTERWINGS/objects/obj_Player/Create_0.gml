@@ -19,7 +19,7 @@ using_melee = true; //sets the attack type. true = using melee, false = using ra
 
 function MeleeAttack()
 {
-	//Code here
+	// code here
 }
 
 function RangedAttack()
