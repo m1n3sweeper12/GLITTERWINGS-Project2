@@ -2,7 +2,7 @@
 
 // This object is the parent for every other enemy in the game.
 
-max_health_points = 50;
+max_health_points = 100;
 cur_health_points = max_health_points;
 walk_speed = 2; // walk speed when idle
 

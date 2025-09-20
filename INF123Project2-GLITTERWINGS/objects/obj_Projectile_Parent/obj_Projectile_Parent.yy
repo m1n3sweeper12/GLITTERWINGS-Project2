@@ -11,8 +11,8 @@
   "name":"obj_Projectile_Parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Mechanical",
-    "path":"folders/Objects/Mechanical.yy",
+    "name":"Effects",
+    "path":"folders/Objects/Effects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
