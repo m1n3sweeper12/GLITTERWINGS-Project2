@@ -25,6 +25,8 @@ wander_margin = 30;
 
 target_x = x;
 target_y = y;
+gold_count = (irandom_range(1, 5));
+
 
 alarm[0] = 1;
 

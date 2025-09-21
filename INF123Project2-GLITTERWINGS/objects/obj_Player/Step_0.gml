@@ -70,3 +70,16 @@ if (mouse_check_button_pressed(mb_left))
 		RangedAttack()
 	}
 }
+
+if (keyboard_check_pressed(ord("Q")))
+{
+	if (healing_potions > 0 and cur_health_points != max_health_points)
+	{
+		healing_potions--;
+		cur_health_points += 40;
+		if (cur_health_points >= max_health_points)
+		{
+			cur_health_points = max_health_points;
+		}
+	}
+}
