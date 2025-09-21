@@ -24,10 +24,10 @@ can_swing = true; // Checks if you can swing melee
 
 function MeleeAttack()
 {
-	instance_create_layer(x + 0, y + 0, "Instances", obj_Melee_Parent);
+	instance_create_layer(x + 0, y + 0, "Instances", obj_Melee_Blade);
 }
 
 function RangedAttack()
 {
-	instance_create_layer(x + 0, y + 0, "Instances", obj_Projectile_Parent);
+	instance_create_layer(x + 0, y + 0, "Instances", obj_Projectile_Firebolt);
 }

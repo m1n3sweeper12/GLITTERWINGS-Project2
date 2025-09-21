@@ -8,7 +8,7 @@ function Attack()
 	
 else if (obj_Player.using_melee = false) // Ranged Attacks
 	{
-		instance_create_layer(x + 0, y + 0, "Instances", obj_Projectile_Parent);
+		instance_create_layer(x + 0, y + 0, "Instances", obj_Projectile_Firebolt);
 	}
 }
 	
