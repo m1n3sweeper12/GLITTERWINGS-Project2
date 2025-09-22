@@ -1,0 +1,1 @@
+obj_Player.gold += gold_count;
