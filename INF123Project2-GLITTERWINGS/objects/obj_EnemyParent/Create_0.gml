@@ -30,6 +30,8 @@ gold_count = (irandom_range(1, 5));
 
 alarm[0] = 1;
 
+attacking = false;
+
 // function returns the horizontal direction (-1, 1, or 0) for x that gets the enemy closer to a point
 function CheckHorMotion(point_x, point_y, margin) {
 	// check if x is within margin (prevents jittering)
