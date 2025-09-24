@@ -3,7 +3,7 @@
 max_health_points = 100;
 cur_health_points = max_health_points;
 loot_mod = 1;
-walk_speed = 5;
+walk_speed = 4;
 
 melee_speed = 1;
 melee_reach = 1;
