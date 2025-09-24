@@ -1,4 +1,4 @@
-character = 2; //Set your character here
+character = obj_Menu.character; //Set your character here
 
 // starts background music
 if(room == Room1) {

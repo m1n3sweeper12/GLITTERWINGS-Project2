@@ -1,6 +1,8 @@
 direction = point_direction(x,y,mouse_x,mouse_y);
 image_angle = direction;
 
+audio_play_sound(sfx_SwordSwing, 1, false);
+
 is_hurting = true;
 
 obj_Player.can_swing = false;

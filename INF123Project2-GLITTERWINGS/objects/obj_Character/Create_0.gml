@@ -1,0 +1,1 @@
+character = obj_Menu.character;
