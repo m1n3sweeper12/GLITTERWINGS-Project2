@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Rogue",
-    "path":"folders/Sprites/Characters/Rogue.yy",
+    "name":"Run",
+    "path":"folders/Sprites/Characters/Rogue/Run.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
