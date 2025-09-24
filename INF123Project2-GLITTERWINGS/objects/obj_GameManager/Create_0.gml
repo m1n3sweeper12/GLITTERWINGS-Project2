@@ -1,5 +1,9 @@
 character = 2; //Set your character here
 
+// starts background music
+if(room == Room1) {
+	audio_play_sound(sfx_BackgroundMusic, 2, true);
+}
 
 // Switches between characters
 switch(character)

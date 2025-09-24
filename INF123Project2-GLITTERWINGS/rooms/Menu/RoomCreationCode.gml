@@ -1,0 +1,1 @@
+audio_play_sound(sfx_MenuMusic, 1, true);
