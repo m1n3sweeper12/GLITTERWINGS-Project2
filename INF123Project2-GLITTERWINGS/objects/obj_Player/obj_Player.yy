@@ -33,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_Raccoon_South",
-    "path":"sprites/spr_Raccoon_South/spr_Raccoon_South.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,4 +1,4 @@
-character = 0; //Set your character here
+character = 2; //Set your character here
 
 
 // Switches between characters

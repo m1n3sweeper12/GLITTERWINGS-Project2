@@ -2,7 +2,7 @@
 
 health_points = 50;
 loot_mod = 1;
-walk_speed = 5;
+walk_speed = 4;
 
 melee_speed = 1;
 melee_reach = 1;
