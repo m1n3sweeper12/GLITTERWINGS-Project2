@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"AnimatedArmor",
-    "path":"folders/Sprites/Emenies/AnimatedArmor.yy",
+    "path":"folders/Sprites/Enemies/AnimatedArmor.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
