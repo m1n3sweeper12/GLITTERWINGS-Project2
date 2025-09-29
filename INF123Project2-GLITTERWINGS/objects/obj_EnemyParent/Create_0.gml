@@ -2,8 +2,8 @@
 
 // This object is the parent for every other enemy in the game.
 
-health_points = 50;
-loot_mod = 1;
+max_health_points = 100;
+cur_health_points = max_health_points;
 walk_speed = 2; // walk speed when idle
 
 melee_speed = 1;
@@ -25,6 +25,8 @@ wander_margin = 30;
 
 target_x = x;
 target_y = y;
+gold_count = (irandom_range(1, 5));
+
 
 alarm[0] = 1;
 

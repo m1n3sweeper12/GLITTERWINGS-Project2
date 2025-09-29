@@ -1,32 +1,33 @@
 // Creating basic stats: (All are placeholder values)
 
-health_points = 50;
+max_health_points = 100;
+cur_health_points = max_health_points;
 loot_mod = 1;
-walk_speed = 5;
+walk_speed = 4;
 
 melee_speed = 1;
 melee_reach = 1;
-melee_damage = 1;
+melee_damage = 10;
 
 ranged_speed = 1;
-ranged_reach = 1;
-ranged_damage = 1;
+ranged_reach = 8; // How far you can shoot.
+ranged_damage = 10;
 
 // Simple Setup
 
 using_melee = true; //sets the attack type. true = using melee, false = using ranged.
+can_shoot = true; // Checks if you can shoot ranged
+can_swing = true; // Checks if you can swing melee
 
+gold = 0;
+healing_potions = 0;
 
-// Melee attack should go here.
-function MeleeAttack() 
+function MeleeAttack()
 {
-	// code here.
+	instance_create_layer(x + 0, y + 0, "Instances", obj_Melee_Blade);
 }
 
-// Ranged attack should go here.
-function RangedAttack() 
+function RangedAttack()
 {
-	// code here.
+	instance_create_layer(x + 0, y + 0, "Instances", obj_Projectile_Firebolt);
 }
-
-
