@@ -8,6 +8,7 @@
   "instanceCreationOrder":[
     {"name":"inst_18CE242D","path":"rooms/Room1/Room1.yy",},
 <<<<<<< HEAD
+<<<<<<< HEAD
     {"name":"inst_19CE3D6D","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_70793539","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_7C8977B8","path":"rooms/Room1/Room1.yy",},
@@ -21,6 +22,8 @@
     {"name":"inst_38B540D4","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_7C2E2B76","path":"rooms/Room1/Room1.yy",},
 =======
+=======
+>>>>>>> parent of 8c36a6d (Merge pull request #14 from m1n3sweeper12/alivia)
     {"name":"inst_116ADC78","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_210ECF6C","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_DB788D1","path":"rooms/Room1/Room1.yy",},
@@ -50,6 +53,9 @@
     {"name":"inst_6A10F6F0","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_2998C6E3","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_47695A55","path":"rooms/Room1/Room1.yy",},
+<<<<<<< HEAD
+>>>>>>> parent of 8c36a6d (Merge pull request #14 from m1n3sweeper12/alivia)
+=======
 >>>>>>> parent of 8c36a6d (Merge pull request #14 from m1n3sweeper12/alivia)
   ],
   "isDnd":false,
