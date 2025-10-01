@@ -2,24 +2,16 @@
   "$GMSprite":"",
   "%Name":"spr_Armor_West",
   "bboxMode":0,
-<<<<<<< HEAD
   "bbox_bottom":58,
   "bbox_left":13,
   "bbox_right":46,
   "bbox_top":6,
-=======
-  "bbox_bottom":61,
-  "bbox_left":2,
-  "bbox_right":61,
-  "bbox_top":2,
->>>>>>> parent of 18cd655 (enemy sprite)
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-<<<<<<< HEAD
     {"$GMSpriteFrame":"","%Name":"a968073b-80bd-457c-8c96-2aed7f7e0ad5","name":"a968073b-80bd-457c-8c96-2aed7f7e0ad5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"be891c94-b1b3-4c41-a48d-d292cd0fadd6","name":"be891c94-b1b3-4c41-a48d-d292cd0fadd6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"4a58c932-7edf-411c-bb01-9ef5abdc50c2","name":"4a58c932-7edf-411c-bb01-9ef5abdc50c2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
@@ -31,20 +23,13 @@
     {"$GMSpriteFrame":"","%Name":"c1633665-73e4-4bd5-aaa9-dd306bcc495b","name":"c1633665-73e4-4bd5-aaa9-dd306bcc495b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"fb65d3a0-2788-4982-b7ea-58078358a3fa","name":"fb65d3a0-2788-4982-b7ea-58078358a3fa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"a61fa64b-b929-43b5-bf25-0949eff138aa","name":"a61fa64b-b929-43b5-bf25-0949eff138aa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-=======
-    {"$GMSpriteFrame":"","%Name":"af0a14df-8b8b-4626-bbdb-3cf50a1587e2","name":"af0a14df-8b8b-4626-bbdb-3cf50a1587e2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
->>>>>>> parent of 18cd655 (enemy sprite)
   ],
   "gridX":0,
   "gridY":0,
   "height":64,
   "HTile":false,
   "layers":[
-<<<<<<< HEAD
     {"$GMImageLayer":"","%Name":"c2369628-4b2d-4d80-922e-ba79d72611a4","blendMode":0,"displayName":"default","isLocked":false,"name":"c2369628-4b2d-4d80-922e-ba79d72611a4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-=======
-    {"$GMImageLayer":"","%Name":"752b872c-4ab1-4630-8b02-8a4b696d8ca4","blendMode":0,"displayName":"default","isLocked":false,"name":"752b872c-4ab1-4630-8b02-8a4b696d8ca4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
->>>>>>> parent of 18cd655 (enemy sprite)
   ],
   "name":"spr_Armor_West",
   "nineSlice":null,
@@ -74,11 +59,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-<<<<<<< HEAD
     "length":11.0,
-=======
-    "length":1.0,
->>>>>>> parent of 18cd655 (enemy sprite)
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -88,11 +69,7 @@
     },
     "name":"spr_Armor_West",
     "playback":1,
-<<<<<<< HEAD
     "playbackSpeed":8.0,
-=======
-    "playbackSpeed":30.0,
->>>>>>> parent of 18cd655 (enemy sprite)
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -104,7 +81,6 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-<<<<<<< HEAD
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a968073b-80bd-457c-8c96-2aed7f7e0ad5","path":"sprites/spr_Armor_West/spr_Armor_West.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"4070c726-ea09-4f6f-82f7-4850368b891e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
@@ -137,10 +113,6 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a61fa64b-b929-43b5-bf25-0949eff138aa","path":"sprites/spr_Armor_West/spr_Armor_West.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"6fd811ef-679c-4d8b-b34d-66f63a1616e8","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-=======
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"af0a14df-8b8b-4626-bbdb-3cf50a1587e2","path":"sprites/spr_Armor_West/spr_Armor_West.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"47da2aa5-9fb9-4282-9b88-47a6cbabd2b0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
->>>>>>> parent of 18cd655 (enemy sprite)
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

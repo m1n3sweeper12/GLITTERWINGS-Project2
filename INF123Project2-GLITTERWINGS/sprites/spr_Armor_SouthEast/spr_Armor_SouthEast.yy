@@ -3,22 +3,15 @@
   "%Name":"spr_Armor_SouthEast",
   "bboxMode":0,
   "bbox_bottom":61,
-<<<<<<< HEAD
   "bbox_left":17,
   "bbox_right":51,
   "bbox_top":9,
-=======
-  "bbox_left":2,
-  "bbox_right":61,
-  "bbox_top":2,
->>>>>>> parent of 18cd655 (enemy sprite)
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-<<<<<<< HEAD
     {"$GMSpriteFrame":"","%Name":"bd7950e9-89ba-4331-a4cc-7e4cad1be593","name":"bd7950e9-89ba-4331-a4cc-7e4cad1be593","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"6f66b94a-2ff4-45b2-868b-8ab7c69fba26","name":"6f66b94a-2ff4-45b2-868b-8ab7c69fba26","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"20f92432-a9c6-455d-81a4-4e4fd3b73bd4","name":"20f92432-a9c6-455d-81a4-4e4fd3b73bd4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
@@ -30,20 +23,13 @@
     {"$GMSpriteFrame":"","%Name":"fbb2542f-67b0-4a00-86db-0dcfe8cb3013","name":"fbb2542f-67b0-4a00-86db-0dcfe8cb3013","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"f46e0944-5c44-487c-a8ca-b25c6e3a72d8","name":"f46e0944-5c44-487c-a8ca-b25c6e3a72d8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"280d36b6-4d04-4aa0-bc63-96408238e785","name":"280d36b6-4d04-4aa0-bc63-96408238e785","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-=======
-    {"$GMSpriteFrame":"","%Name":"af0a14df-8b8b-4626-bbdb-3cf50a1587e2","name":"af0a14df-8b8b-4626-bbdb-3cf50a1587e2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
->>>>>>> parent of 18cd655 (enemy sprite)
   ],
   "gridX":0,
   "gridY":0,
   "height":64,
   "HTile":false,
   "layers":[
-<<<<<<< HEAD
     {"$GMImageLayer":"","%Name":"36b1c5f8-d383-4edb-a347-20b7833f5db3","blendMode":0,"displayName":"default","isLocked":false,"name":"36b1c5f8-d383-4edb-a347-20b7833f5db3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-=======
-    {"$GMImageLayer":"","%Name":"752b872c-4ab1-4630-8b02-8a4b696d8ca4","blendMode":0,"displayName":"default","isLocked":false,"name":"752b872c-4ab1-4630-8b02-8a4b696d8ca4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
->>>>>>> parent of 18cd655 (enemy sprite)
   ],
   "name":"spr_Armor_SouthEast",
   "nineSlice":null,
@@ -73,11 +59,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-<<<<<<< HEAD
     "length":11.0,
-=======
-    "length":1.0,
->>>>>>> parent of 18cd655 (enemy sprite)
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -87,11 +69,7 @@
     },
     "name":"spr_Armor_SouthEast",
     "playback":1,
-<<<<<<< HEAD
     "playbackSpeed":8.0,
-=======
-    "playbackSpeed":30.0,
->>>>>>> parent of 18cd655 (enemy sprite)
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -103,7 +81,6 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-<<<<<<< HEAD
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bd7950e9-89ba-4331-a4cc-7e4cad1be593","path":"sprites/spr_Armor_SouthEast/spr_Armor_SouthEast.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"83ff4635-3294-4815-965e-5a2cf4627f84","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
@@ -136,10 +113,6 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"280d36b6-4d04-4aa0-bc63-96408238e785","path":"sprites/spr_Armor_SouthEast/spr_Armor_SouthEast.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"fc007bc2-dbe1-4a9e-a92f-375d4bcca8f6","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-=======
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"af0a14df-8b8b-4626-bbdb-3cf50a1587e2","path":"sprites/spr_Armor_SouthEast/spr_Armor_SouthEast.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"47da2aa5-9fb9-4282-9b88-47a6cbabd2b0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
->>>>>>> parent of 18cd655 (enemy sprite)
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
