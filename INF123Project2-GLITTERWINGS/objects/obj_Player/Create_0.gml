@@ -22,6 +22,24 @@ can_swing = true; // Checks if you can swing melee
 gold = 0;
 healing_potions = 0;
 
+//spriteEast = spr_Experiment;
+//spriteNorth = spr_Experiment;
+//spriteWest = spr_Experiment;
+//spriteSouth = spr_Experiment;
+//spriteSouthEast = spr_Experiment;
+//spriteSouthWest = spr_Experiment;
+//spriteNorthEast = spr_Experiment;
+//spriteNorthWest = spr_Experiment;
+
+//spriteIdleEast = spr_Experiment;
+//spriteIdleNorth = spr_Experiment;
+//spriteIdleSouth = spr_Experiment;
+//spriteIdleWest = spr_Experiment
+//spriteIdleNorthEast = spr_Experiment;
+//spriteIdleNorthWest = spr_Experiment;
+//spriteIdleSouthEast = spr_Experiment;
+//spriteIdleSouthWest = spr_Experiment;
+
 function MeleeAttack()
 {
 	instance_create_layer(x + 0, y + 0, "Instances", obj_Melee_Blade);
