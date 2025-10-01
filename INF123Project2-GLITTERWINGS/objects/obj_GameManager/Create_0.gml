@@ -6,6 +6,9 @@ if(room == Room1) {
 }
 
 // Switches between characters
+
+show_debug_message("got here");
+
 switch(character)
 {
 	// Fighter Badger
