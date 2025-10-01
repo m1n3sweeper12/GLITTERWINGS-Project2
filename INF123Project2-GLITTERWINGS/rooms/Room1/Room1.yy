@@ -7,17 +7,19 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_18CE242D","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_19CE3D6D","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_70793539","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_7C8977B8","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_4A8E0731","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_FA76F06","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_253C251A","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_116ADC78","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_210ECF6C","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_3F884F79","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_6768887C","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_38B540D4","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_7C2E2B76","path":"rooms/Room1/Room1.yy",},
   ],
-  "isDnd":false,
-  "layers":[
-    {"$GMRTileLayer":"","%Name":"Tiles_1","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":15,"SerialiseWidth":20,"TileCompressedData":[
-          1,34,-4,20,1,21,-7,33,1,22,-5,20,2,36,16,-4,47,1,24,-7,0,1,16,-5,47,2,24,16,-4,47,3,24,0,34,-3,20,3,
-          36,0,16,-5,47,2,24,16,-4,47,3,24,0,16,-3,47,3,24,0,16,-5,47,2,24,40,-4,28,3,38,0,16,-3,47,3,24,0,16,
-          -5,47,1,24,-7,0,1,16,-3,47,3,24,0,40,-4,28,3,12,38,34,-6,20,1,1,-3,47,1,24,-6,0,3,32,0,16,-10,47,1,2,
-          -6,20,7,3,36,16,4,28,8,4,-9,28,1,8,-4,47,6,24,16,24,0,16,24,-9,0,1,16,-4,47,16,24,16,24,0,16,2,20,20,
-          36,0,34,20,20,36,0,16,-4,47,16,24,16,24,0,40,28,28,8,24,0,40,12,28,38,0,40,-4,28,3,38,16,24,-4,0,5,16,
-          24,0,0,32,-9,0,11,16,2,20,20,36,0,16,2,20,20,3,-8,20,2,36,40,-3,28,3,38,0,40,-12,28,1,38,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tileset_dungeon","path":"tilesets/tileset_dungeon/tileset_dungeon.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
