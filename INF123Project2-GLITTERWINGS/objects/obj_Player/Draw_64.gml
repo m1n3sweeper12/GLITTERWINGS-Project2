@@ -1,5 +1,15 @@
-draw_healthbar(x + -32, y + 80, x + 32, y + 64, cur_health_points, $FF7F7F7F & $FFFFFF, $FF0000FF & $FFFFFF, $FF00FF00 & $FFFFFF, 0, (($FF7F7F7F>>24) != 0), (($FF000000>>24) != 0));
 
 draw_set_colour(c_white);
-draw_text(4, 2, $"Gold: {gold}");
-draw_text(4, 18, $"Pots: {healing_potions}");
+draw_text(90, 40, $"Gold: {gold}");
+draw_text(90, 100, $"Potions: {healing_potions}");
+
+// draws box around mini-map
+draw_set_color(c_white);
+// top line
+draw_line_width(1030, 10, 1270, 10, 5);
+// bottom line
+draw_line_width(1030, 190, 1270, 190, 5);
+// left line
+draw_line_width(1030, 10, 1030, 190, 5);
+// right line
+draw_line_width(1270, 10, 1270, 190, 5);

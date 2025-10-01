@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Wizard",
-    "path":"folders/Sprites/Characters/Wizard.yy",
+    "name":"Run",
+    "path":"folders/Sprites/Characters/Wizard/Run.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

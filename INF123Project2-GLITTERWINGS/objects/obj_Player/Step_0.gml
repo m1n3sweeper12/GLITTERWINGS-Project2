@@ -20,9 +20,6 @@ if (_hor != 0 or _ver != 0)
 	
 	else if (_ver = 0) and (_hor < 0) { sprite_index = spriteWest; direction = 180;} // Moving West
 	
-	// Keep this commented out section for future usage
-	
-	/*
 	else if (_ver < 0) and (_hor < 0) { sprite_index = spriteNorthWest; direction = 135;} // Moving North West
 	
 	else if (_ver < 0) and (_hor > 0) { sprite_index = spriteNorthEast; direction = 45;} // Moving North East
@@ -30,8 +27,18 @@ if (_hor != 0 or _ver != 0)
 	else if (_ver > 0) and (_hor < 0) { sprite_index = spriteSouthWest; direction = 225;} // Moving South West
 	
 	else if (_ver > 0) and (_hor > 0) { sprite_index = spriteSouthEast; direction = 315;} // Moving South East
-	*/
 
+} else {
+	switch(direction) {
+		case 90: sprite_index = spriteIdleNorth;break;
+		case 270: sprite_index = spriteIdleSouth;break;
+		case 0: sprite_index = spriteIdleEast;break;
+		case 180: sprite_index = spriteIdleWest;break;
+		case 135: sprite_index = spriteIdleNorthWest;break;
+		case 45: sprite_index = spriteIdleNorthEast;break;
+		case 225: sprite_index = spriteIdleSouthWest;break;
+		case 315: sprite_index = spriteIdleSouthEast;break;
+	}
 }
 
 //--------------------------------------------------------

@@ -1,5 +1,9 @@
-character = 2; //Set your character here
+character = obj_Menu.character; //Set your character here
 
+// starts background music
+if(room == Room1) {
+	audio_play_sound(sfx_BackgroundMusic, 2, true);
+}
 
 // Switches between characters
 switch(character)
@@ -55,6 +59,15 @@ switch(character)
 		spriteSouthEast = spr_Rogue_SouthEast;
 		spriteSouthWest = spr_Rogue_SouthWest;
 		
+		spriteIdleNorth = spr_Rogue_Idle_North;
+		spriteIdleEast = spr_Rogue_Idle_East;
+		spriteIdleSouth = spr_Rogue_Idle_South;
+		spriteIdleWest = spr_Rogue_Idle_West;
+		spriteIdleNorthEast = spr_Rogue_Idle_NorthEast;
+		spriteIdleNorthWest = spr_Rogue_Idle_NorthWest;
+		spriteIdleSouthEast = spr_Rogue_Idle_SouthEast;
+		spriteIdleSouthWest = spr_Rogue_Idle_SouthWest;
+		
 		sprite_index = spr_Rogue_East;
 		image_index = 0;
 		}
@@ -72,6 +85,15 @@ switch(character)
 		spriteNorthWest = spr_Wizard_NorthWest;
 		spriteSouthEast = spr_Wizard_SouthEast;
 		spriteSouthWest = spr_Wizard_SouthWest;
+		
+		spriteIdleNorth = spr_Wizard_Idle_North;
+		spriteIdleEast = spr_Wizard_Idle_East;
+		spriteIdleSouth = spr_Wizard_Idle_South;
+		spriteIdleWest = spr_Wizard_Idle_West;
+		spriteIdleNorthEast = spr_Wizard_Idle_NorthEast;
+		spriteIdleNorthWest = spr_Wizard_Idle_NorthWest;
+		spriteIdleSouthEast = spr_Wizard_Idle_SouthEast;
+		spriteIdleSouthWest = spr_Wizard_Idle_SouthWest;
 		
 		sprite_index = spr_Wizard_East;
 		image_index = 0;
