@@ -44,6 +44,15 @@ switch(character)
 		spriteSouthEast = spr_Ranger_SouthEast;
 		spriteSouthWest = spr_Ranger_SouthWest;
 		
+		spriteIdleNorth = spr_Ranger_Idle_North;
+		spriteIdleEast = spr_Ranger_Idle_East;
+		spriteIdleSouth = spr_Ranger_Idle_South;
+		spriteIdleWest = spr_Ranger_Idle_West;
+		spriteIdleNorthEast = spr_Ranger_Idle_NorthEast;
+		spriteIdleNorthWest = spr_Ranger_Idle_NorthWest;
+		spriteIdleSouthEast = spr_Ranger_Idle_SouthEast;
+		spriteIdleSouthWest = spr_Ranger_Idle_SouthWest;
+		
 		sprite_index = spr_Ranger_East;
 		image_index = 0;
 		}

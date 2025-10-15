@@ -1,4 +1,7 @@
 switch(obj_Character.character) {
+	case 1:
+	text = "A keen hunter with agile skill and speed";
+	sprite_index = spr_Ranger_Preview;
 	case 2:
 	text = "A sly thief with tricks - and daggers - up their sleeve";
 	sprite_index = spr_Rogue_Preview;
