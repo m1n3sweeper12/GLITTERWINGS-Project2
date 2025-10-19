@@ -81,6 +81,7 @@ if (keyboard_check_pressed(ord("Q")))
 {
 	if (healing_potions > 0 and cur_health_points != max_health_points)
 	{
+		audio_play_sound(sfx_Drink, 1, false);
 		healing_potions--;
 		cur_health_points += 40;
 		if (cur_health_points >= max_health_points)
