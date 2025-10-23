@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Projectile_Firebolt",
+  "%Name":"obj_ProjectileParent",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,11 +8,11 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_EnemyParent","path":"objects/obj_EnemyParent/obj_EnemyParent.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Projectile_Firebolt",
+  "name":"obj_ProjectileParent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Effects",
-    "path":"folders/Objects/Effects.yy",
+    "name":"Projectile",
+    "path":"folders/Objects/Effects/Attacks/Projectile.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_WizardProjectile",
-    "path":"sprites/spr_WizardProjectile/spr_WizardProjectile.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

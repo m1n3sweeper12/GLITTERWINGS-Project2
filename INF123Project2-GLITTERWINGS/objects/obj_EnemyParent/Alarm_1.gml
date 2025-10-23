@@ -1,3 +1,3 @@
-obj_Player.cur_health_points -= 5;
+obj_Player.cur_health_points -= 10;
 
 attacking = false;
