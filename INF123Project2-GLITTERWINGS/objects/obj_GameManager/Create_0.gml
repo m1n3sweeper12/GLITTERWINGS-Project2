@@ -53,6 +53,21 @@ switch(character)
 		spriteIdleSouthEast = spr_Ranger_Idle_SouthEast;
 		spriteIdleSouthWest = spr_Ranger_Idle_SouthWest;
 		
+		objectMelee = obj_RangerMelee;
+		objectProjectile = obj_RangerProjectile;
+		
+		obj_Player.walk_speed = 4;
+		
+		obj_Player.melee_speed = 10; // How long the melee weapon is on for.
+		obj_Player.melee_recharge = 15; // How long it takes to use swing again
+		obj_Player.melee_reach = 1; // CONDEMNED
+		obj_Player.melee_damage = 10; // How much damage the melee does.
+
+		obj_Player.ranged_speed = 10; // How fast the projectiles are
+		obj_Player.ranged_recharge = 30; // How long it takes to use swing again
+		obj_Player.ranged_reach = 8; // How far you can shoot.
+		obj_Player.ranged_damage = 25; // How much damage the projectiles do
+		
 		sprite_index = spr_Ranger_East;
 		image_index = 0;
 		}
@@ -80,6 +95,21 @@ switch(character)
 		spriteIdleSouthEast = spr_Rogue_Idle_SouthEast;
 		spriteIdleSouthWest = spr_Rogue_Idle_SouthWest;
 		
+		objectMelee = obj_RogueMelee;
+		objectProjectile = obj_RogueProjectile;
+		
+		obj_Player.walk_speed = 4.5;
+		
+		obj_Player.melee_speed = 8; // How long the melee weapon is on for.
+		obj_Player.melee_recharge = 4; // How long it takes to use swing again
+		obj_Player.melee_reach = 1; // CONDEMNED
+		obj_Player.melee_damage = 10; // How much damage the melee does.
+
+		obj_Player.ranged_speed = 8; // How fast the projectiles are
+		obj_Player.ranged_recharge = 10; // How long it takes to use swing again
+		obj_Player.ranged_reach = 4; // How far you can shoot.
+		obj_Player.ranged_damage = 5; // How much damage the projectiles do
+		
 		sprite_index = spr_Rogue_East;
 		image_index = 0;
 		}
@@ -106,6 +136,21 @@ switch(character)
 		spriteIdleNorthWest = spr_Wizard_Idle_NorthWest;
 		spriteIdleSouthEast = spr_Wizard_Idle_SouthEast;
 		spriteIdleSouthWest = spr_Wizard_Idle_SouthWest;
+		
+		objectMelee = obj_WizardMelee;
+		objectProjectile = obj_WizardProjectile;
+		
+		obj_Player.walk_speed = 3.5;
+		
+		obj_Player.melee_speed = 14; // How long the melee weapon is on for.
+		obj_Player.melee_recharge = 20; // How long it takes to use swing again
+		obj_Player.melee_reach = 1; // CONDEMNED
+		obj_Player.melee_damage = 5; // How much damage the melee does.
+
+		obj_Player.ranged_speed = 8; // How fast the projectiles are
+		obj_Player.ranged_recharge = 10; // How long it takes to use swing again
+		obj_Player.ranged_reach = 8; // How far you can shoot.
+		obj_Player.ranged_damage = 15; // How much damage the projectiles do
 		
 		sprite_index = spr_Wizard_East;
 		image_index = 0;
