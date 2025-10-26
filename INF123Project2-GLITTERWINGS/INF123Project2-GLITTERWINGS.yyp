@@ -221,8 +221,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"ArenaRoom","path":"rooms/ArenaRoom/ArenaRoom.yy",},},
     {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
+    {"roomId":{"name":"ArenaRoom","path":"rooms/ArenaRoom/ArenaRoom.yy",},},
     {"roomId":{"name":"CharacterSelect","path":"rooms/CharacterSelect/CharacterSelect.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},

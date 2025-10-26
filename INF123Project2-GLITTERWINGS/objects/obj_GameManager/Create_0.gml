@@ -1,4 +1,4 @@
-character = obj_Menu.character; //Set your character here
+character = 2;//obj_Menu.character; //Set your character here
 
 // starts background music
 if(room == Room1) {
@@ -26,6 +26,18 @@ switch(character)
 		spriteSouthEast = spr_Fighter_SouthEast;
 		spriteSouthWest = spr_Fighter_SouthWest;
 		
+		// TEMP: might be causing room initialization errors
+		////////////////////////////////////////////////////////
+		spriteIdleNorth = spr_Ranger_Idle_North;
+		spriteIdleEast = spr_Ranger_Idle_East;
+		spriteIdleSouth = spr_Ranger_Idle_South;
+		spriteIdleWest = spr_Ranger_Idle_West;
+		spriteIdleNorthEast = spr_Ranger_Idle_NorthEast;
+		spriteIdleNorthWest = spr_Ranger_Idle_NorthWest;
+		spriteIdleSouthEast = spr_Ranger_Idle_SouthEast;
+		spriteIdleSouthWest = spr_Ranger_Idle_SouthWest;
+		////////////////////////////////////////////////////////
+		
 		sprite_index = spr_Fighter_East;
 		image_index = 0;
 		}
@@ -34,7 +46,6 @@ switch(character)
 	// Ranger Fox
 	case 1:
 	with(obj_Player) {
-		
 		spriteNorth = spr_Ranger_North;
 		spriteEast = spr_Ranger_East;
 		spriteSouth = spr_Ranger_South;
@@ -60,8 +71,7 @@ switch(character)
 
 	// Rogue Raccoon
 	case 2:
-	with(obj_Player) {
-		
+	with(instance_find(obj_Player, 1)) {
 		spriteNorth = spr_Rogue_North;
 		spriteEast = spr_Rogue_East;
 		spriteSouth = spr_Rogue_South;
