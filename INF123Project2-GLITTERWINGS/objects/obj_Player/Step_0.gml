@@ -1,6 +1,12 @@
 // commented this out to test collisions with just direction
 // direction = image_angle; // Set direction to whichever way the sprite is facing
 
+// player death
+if(cur_health_points <= 0) {
+	instance_destroy(self);
+	instance_destroy(obj_GameManager);
+	room_goto(Menu);
+}
 
 // Basic Movement
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));

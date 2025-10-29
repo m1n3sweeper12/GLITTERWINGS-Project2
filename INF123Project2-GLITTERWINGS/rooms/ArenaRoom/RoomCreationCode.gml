@@ -1,6 +1,7 @@
 // create an instance of the game manager object
 instance_create_layer(0, 0, "Instances", obj_GameManager);
 
+/*
 // determine level width and height
 var level_width = random_range(16, 24);
 var level_height = random_range(16, 24);
@@ -268,7 +269,7 @@ for (var _yy = 0; _yy < array_length(tile_array); _yy++)
 				instance_create_layer(_xx*128, _yy*128, "Instances", obj_Chest);
 				tilemap_set(_tilemap_id, 47, _xx, _yy);
 			}
-			*/
+			
 		}else { // empty space
 			instance_create_layer(_xx*128, _yy*128, "Walls", obj_Wall);
 		}
@@ -317,4 +318,180 @@ function initRoom(rm_width, rm_height, level_width, level_height, tile_array) {
 	var coords = [rm_x, rm_y];
 	
 	return coords;
+}
+*/
+
+//////////////////////////////////////////
+// NEW ATTEMPT STARTS HERE////////////////
+//////////////////////////////////////////
+
+var rm_width = floor(room_width/128); // get integer for number of blocks in room width
+var rm_height = floor(room_height/128); // get integer for number of blocks in room width
+
+// initialize tile array
+var tile_array;
+
+for(var i = 0; i < rm_width; i++) {
+	for(var j = 0; j < rm_height; j++) {
+		tile_array[i][j] = 0; // set all tiles initially to empty
+	}
+}
+
+// generate x and y values for origin block
+var origin_x = floor(random_range(0, rm_width));
+var origin_y = floor(random_range(0, rm_height));
+
+var curr_x = origin_x;
+var curr_y = origin_y;
+
+tile_array[curr_x][curr_y] = 2;
+
+var end_x = curr_x;
+var end_y = curr_y;
+
+var room_num = floor(random_range(250, 500));
+
+var chest_count = floor(random_range(3, 7));
+var enemy_count = floor(random_range(5, 12));
+
+// generate dungeon
+while(room_num > 0) {
+	var dir_x = 0;
+	var dir_y = 0;
+	
+	var prev_x = curr_x;
+	var prev_y = curr_y;
+	
+	// check that tile in that direction isn't already taken
+	while((dir_x == 0 && dir_y == 0) && tile_array[curr_x + dir_x][curr_y + dir_y] == 1) {
+		dir_x = getDirection()[0];
+		dir_y = getDirection()[1];
+		
+		curr_x += dir_x;
+		curr_y += dir_y;
+		
+		if(curr_x < 1 || curr_x >= rm_width - 1 || curr_y < 1 || curr_y >= rm_height - 1
+		|| (tile_array[curr_x-1][curr_y] == 0 && tile_array[curr_x+1][curr_y] == 0 && tile_array[curr_x][curr_y-1] == 0 && tile_array[curr_x][curr_y+1] == 0)) {
+			show_debug_message("got here");
+			curr_x = prev_x;
+			curr_y = prev_y;
+			dir_x = 0;
+			dir_y = 0;
+			break;
+		}
+		
+		//show_debug_message(string_concat("dir_x: ", dir_x, " | dir_y: ", dir_y));
+	}
+	
+	// set tile in new location to 1
+	tile_array[curr_x][curr_y] = 1;
+	
+	if(enemy_count > 0) {
+		
+		var check = floor(random_range(1, 10));
+		
+		if(check == 3 && abs(curr_x - origin_x) > 2 && abs(curr_y - origin_y) > 2
+		&& (not(instance_exists(obj_EnemyParent)) || point_distance(instance_nearest(curr_x*128, curr_y*128, obj_EnemyParent).x,
+		instance_nearest(curr_x*128, curr_y*128, obj_EnemyParent).y, curr_x*128, curr_y*128) > 10)) {
+			instance_create_layer(curr_x*128 + 64, curr_y*128 + 64, "Instances", obj_EnemyParent);
+			enemy_count--;
+		}
+	}
+	
+	if(chest_count > 0) {
+		var check = floor(random_range(1, 10));
+		
+		if(check == 4 && abs(curr_x - origin_x) > 1 && abs(curr_y - origin_y) > 1
+		&& (not(instance_exists(obj_Chest)) || point_distance(instance_nearest(curr_x*128, curr_y*128, obj_Chest).x,
+		instance_nearest(curr_x*128, curr_y*128, obj_Chest).y, curr_x*128, curr_y*128) > 10)) {
+			instance_create_layer(curr_x*128, curr_y*128, "Instances", obj_Chest);
+			chest_count--;
+		}
+	}
+	
+	show_debug_message(string_concat(curr_x, ", ", curr_y));
+	
+	// check if there are any 4-square rooms
+	for(var i = 1; i < rm_width - 1; i++) {
+		for(var j = 1; j < rm_height - 1; j++) {
+			
+			// check if block is further from player spawn
+			if(point_distance(origin_x, origin_y, end_x, end_y) <= point_distance(origin_x, origin_y, i, j)) {
+				end_x = i;
+				end_y = j;
+			}
+			
+		}
+	}
+	
+	room_num--;
+	if(room_num == 0) {
+		end_x = curr_x;
+		end_y = curr_y;
+	}
+}
+
+show_debug_message(string_concat("room tiles:"));
+
+// create end point
+//show_debug_message(string_concat(end_x*128, ", ", end_y*128));
+instance_create_layer(end_x*128, end_y*128, "Instances", obj_NextRoom);
+
+// set player x and y
+obj_Player.x = origin_x*128 + 64;
+obj_Player.y = origin_y*128 + 64;
+
+var _layer_id = layer_get_id("Tiles_1");
+var _tilemap_id = layer_tilemap_get_id(_layer_id);
+
+var _tile_width = 128;
+var _tile_height = 128;
+
+for (var _yy = 0; _yy < rm_width; _yy++) {
+    for (var _xx = 0; _xx < rm_height; _xx++) {
+        var _tile_index = tile_array[_yy][_xx];
+		if(_tile_index > 0) {
+			if(_tile_index == 1) {
+				tilemap_set(_tilemap_id, 47, _yy, _xx);
+			} else if(_tile_index == 2) {
+				tilemap_set(_tilemap_id, 46, _yy, _xx);
+			}
+		} else { // empty space
+			instance_create_layer(_yy*128, _xx*128, "Walls", obj_Wall);
+		}
+    }
+}
+
+function getDirection() {
+	var dir = floor(random_range(0, 4));
+	var point = [2];
+	var dir_x = 0;
+	var dir_y = 0;
+	switch(dir) {
+		case 0:
+			dir_x = 1; // move right
+			dir_y = 0;
+			break;
+		case 1:
+			dir_x = -1; // move left
+			dir_y = 0;
+			break;
+		case 2:
+			dir_x = 0;
+			dir_y = 1; // move down
+			break;
+		case 3:
+			dir_x = 0;
+			dir_y = -1; // move up
+			break;
+		default: // default to right
+			dir_x = 1;
+			dir_y = 0;
+			break;
+	}
+	
+	point[0] = dir_x;
+	point[1] = dir_y;
+	
+	return point;
 }

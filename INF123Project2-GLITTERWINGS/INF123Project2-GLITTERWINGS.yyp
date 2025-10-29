@@ -104,6 +104,7 @@
     {"id":{"name":"sfx_Button_Click","path":"sounds/sfx_Button_Click/sfx_Button_Click.yy",},},
     {"id":{"name":"sfx_Character_Select","path":"sounds/sfx_Character_Select/sfx_Character_Select.yy",},},
     {"id":{"name":"sfx_Drink","path":"sounds/sfx_Drink/sfx_Drink.yy",},},
+    {"id":{"name":"sfx_Fireball","path":"sounds/sfx_Fireball/sfx_Fireball.yy",},},
     {"id":{"name":"sfx_MenuMusic","path":"sounds/sfx_MenuMusic/sfx_MenuMusic.yy",},},
     {"id":{"name":"sfx_OpenChest","path":"sounds/sfx_OpenChest/sfx_OpenChest.yy",},},
     {"id":{"name":"sfx_Select_Click","path":"sounds/sfx_Select_Click/sfx_Select_Click.yy",},},
