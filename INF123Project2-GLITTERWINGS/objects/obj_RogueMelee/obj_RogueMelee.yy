@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_EnemyGolem",
-  "eventList":[],
+  "%Name":"obj_RogueMelee",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_EnemyGolem",
+  "name":"obj_RogueMelee",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Enemies.yy",
+    "name":"Melee",
+    "path":"folders/Objects/Effects/Attacks/Melee.yy",
   },
   "parentObjectId":{
-    "name":"obj_EnemyParent",
-    "path":"objects/obj_EnemyParent/obj_EnemyParent.yy",
+    "name":"obj_MeleeParent",
+    "path":"objects/obj_MeleeParent/obj_MeleeParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Armor_East",
-    "path":"sprites/spr_Armor_East/spr_Armor_East.yy",
+    "name":"spr_RogueMelee",
+    "path":"sprites/spr_RogueMelee/spr_RogueMelee.yy",
   },
   "spriteMaskId":null,
   "visible":true,
