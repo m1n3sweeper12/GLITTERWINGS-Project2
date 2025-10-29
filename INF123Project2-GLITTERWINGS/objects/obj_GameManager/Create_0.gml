@@ -1,4 +1,4 @@
-character = 2;//obj_Menu.character; //Set your character here
+character = obj_Menu.character; //Set your character here
 
 // starts background music
 if(room == Room1) {
@@ -6,8 +6,6 @@ if(room == Room1) {
 }
 
 // Switches between characters
-
-show_debug_message("got here");
 
 switch(character)
 {
@@ -71,7 +69,7 @@ switch(character)
 
 	// Rogue Raccoon
 	case 2:
-	with(instance_find(obj_Player, 1)) {
+	with(obj_Player) {
 		spriteNorth = spr_Rogue_North;
 		spriteEast = spr_Rogue_East;
 		spriteSouth = spr_Rogue_South;

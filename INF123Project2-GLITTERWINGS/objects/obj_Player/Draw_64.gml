@@ -8,8 +8,8 @@ draw_set_color(c_white);
 // top line
 draw_line_width(1030, 10, 1270, 10, 5);
 // bottom line
-draw_line_width(1030, 190, 1270, 190, 5);
+draw_line_width(1030, 250, 1270, 250, 5);
 // left line
-draw_line_width(1030, 10, 1030, 190, 5);
+draw_line_width(1030, 10, 1030, 250, 5);
 // right line
-draw_line_width(1270, 10, 1270, 190, 5);
+draw_line_width(1270, 10, 1270, 250, 5);

@@ -1,3 +1,6 @@
+// create an instance of the game manager object
+instance_create_layer(0, 0, "Instances", obj_GameManager);
+
 // determine level width and height
 var level_width = random_range(16, 24);
 var level_height = random_range(16, 24);
@@ -37,7 +40,7 @@ var player_spawn = [0, 0];
 // create side rooms
 for(var i = 0; i < side_rooms; i++) {
 	// initialize each side room in tile array
-	var room_coords = initRoom(2, 2, level_width, level_height, tile_array); // calls function to initialize a 2x2 room
+	var room_coords = initRoom(random_range(1, 3), random_range(1, 3), level_width, level_height, tile_array); // calls function to initialize a 2x2 room
 	
 	// determine the x and y direction to get to the main room
 	var dir_x = 0, dir_y = 0;
@@ -62,13 +65,13 @@ for(var i = 0; i < side_rooms; i++) {
 	var hall_x = room_coords[0];
 	var hall_y = room_coords[1];
 	
+	// determine player spawn point
 	if(not player_spawned) {
 		player_spawn = [floor(random_range(1, level_width - 1)), floor(random_range(1, level_height - 1))];
 		while(tile_array[player_spawn[0]][player_spawn[1]] != 4) {
 			player_spawn = [floor(random_range(1, level_width - 1)), floor(random_range(1, level_height - 1))];
 		}
-		tile_array[player_spawn[0]][player_spawn[1]] = 2;
-		show_debug_message(string_concat("player_x: ", obj_Player.x, " | player_y: ", obj_Player.y));
+		tile_array[player_spawn[0]][player_spawn[1]] = 48;
 		player_spawned = true;
 	}
 	
@@ -111,8 +114,127 @@ for(var i = 0; i < side_rooms; i++) {
 	}
 }
 
+// create next room portal
+var far_point = 0;
+var next_spawn_x = 0, next_spawn_y = 0;
 
+for(var i = 0; i < level_width; i++) {
+	for(var j = 0; j < level_height; j++) {
+		if(tile_array[i][j] != -1 && point_distance(i, j, player_spawn[0], player_spawn[1]) > far_point) {
+			next_spawn_x = i;
+			next_spawn_y = j;
+			far_point = point_distance(i, j, player_spawn[0], player_spawn[1]);
+		}
+	}
+}
 
+// add next room portal spawn to tile array
+tile_array[next_spawn_x][next_spawn_y] = 49;
+
+// spawn enemies
+
+var enemy_count = random_range(2, 5);
+
+while(enemy_count > 0) {
+	for(var i = 0; i < main_room_width; i++) {
+		for(var j = 0; j < main_room_height; j++) {
+			var check = floor(random_range(1, 100));
+			if(check == 50) { // 1 in 100 chance of spawning armor at any given point in main room
+				instance_create_layer(main_room_x*128 + i*128, main_room_y*128 + j*128, "Instances", obj_EnemyParent);
+				enemy_count--;
+			} else if(check == 52) { // 1 in 100 chance of spawning golem at any given point in main room
+				instance_create_layer(main_room_x*128 + i*128, main_room_y*128 + j*128, "Instances", obj_EnemyGolem)
+				enemy_count--;
+			}
+		}
+	}
+}
+
+// spawn player, chests, exit room
+for(var i = 0; i < level_width; i++) {
+	for(var j = 0; j < level_height; j++) {
+		if(tile_array[i][j] == 48) {
+			obj_Player.x = j*128;
+			obj_Player.y = i*128;
+			tile_array[i][j] = 4;
+		} else if(tile_array[i][j] == 49) {
+			instance_create_layer(j*128, i*128, "Instances", obj_NextRoom);
+			tile_array[i][j] = 4;
+		} else if(tile_array[i][j] == 50) {
+			instance_create_layer(j*128, i*128, "Instances", obj_Chest);
+			tile_array[i][j] = 4;
+		}
+	}
+}
+
+// fix tile blocking
+for(var i = 0; i < level_width; i++) {
+	for(var j = 0; j < level_height; j++) {
+		if(tile_array[i][j] == 4) { // tile found
+			// remove any inaccessible tiles
+			if(tile_array[i][j - 1] == -1 && tile_array[i][j + 1] == -1 && tile_array[i - 1][j] == -1 && tile_array[i + 1][j] == -1) {
+				tile_array[i][j] = -1;
+			}
+			
+			else if(
+			tile_array[i - 1][j - 1] == -1 && tile_array[i][j - 1] == -1 && tile_array[i + 1][j - 1] == -1 &&
+			tile_array[i - 1][j] == -1 && tile_array[i + 1][j] == -1 &&
+			tile_array[i - 1][j + 1] == -1 && tile_array[i][j + 1] == -1 && tile_array[i + 1][j + 1] == -1) {
+				tile_array[i][j] = 46;
+			}
+			
+			else if(tile_array[i - 1][j] == -1 && tile_array[i + 1][j] == -1 && tile_array[i][j - 1] != -1 && tile_array[i][j + 1] == -1) {
+				tile_array[i][j] = 45;
+			}
+			
+			else if(tile_array[i - 1][j] != -1 && tile_array[i + 1][j] == -1 && tile_array[i][j - 1] == -1 && tile_array[i][j + 1] == -1) {
+				tile_array[i][j] = 44;
+			}
+			
+			else if(tile_array[i - 1][j] != -1 && tile_array[i + 1][j] != -1 && tile_array[i][j - 1] == -1 && tile_array[i][j + 1] == -1) {
+				tile_array[i][j] = 32;
+			}
+			
+			else if(tile_array[i - 1][j] == -1 && tile_array[i + 1][j] == -1 && tile_array[i][j - 1] != -1 && tile_array[i][j + 1] != -1) {
+				tile_array[i][j] = 33;
+			}
+			
+			else if(tile_array[i][j - 1] != -1 && tile_array[i - 1][j] != -1 && tile_array[i + 1][j] != -1 && tile_array[i][j + 1] == -1) {
+				tile_array[i][j] = 24;
+			}
+			
+			else if(tile_array[i][j - 1] != -1 && tile_array[i - 1][j] != -1 && tile_array[i + 1][j] == -1 && tile_array[i][j + 1] != -1) {
+				tile_array[i][j] = 28;
+			}
+			
+			else if(tile_array[i][j - 1] != -1 && tile_array[i - 1][j] == -1 && tile_array[i + 1][j] != -1 && tile_array[i][j + 1] != -1) {
+				tile_array[i][j] = 20;
+			}
+			
+			else if(tile_array[i][j - 1] == -1 && tile_array[i - 1][j] != -1 && tile_array[i + 1][j] != -1 && tile_array[i][j + 1] != -1) {
+				tile_array[i][j] = 16;
+			}
+			
+			else if(tile_array[i - 1][j] == -1 && tile_array[i][j + 1] == -1 && tile_array[i][j - 1] != -1 && tile_array[i + 1][j] != -1) {
+				tile_array[i][j] = 36;
+			}
+			
+			else if(tile_array[i - 1][j] != -1 && tile_array[i][j + 1] != -1 && tile_array[i][j - 1] == -1 && tile_array[i + 1][j] == -1) {
+				tile_array[i][j] = 40;
+			}
+			
+			else if(tile_array[i - 1][j] == -1 && tile_array[i][j + 1] == -1 && tile_array[i][j - 1] != -1 && tile_array[i + 1][j] != -1) {
+				tile_array[i][j] = 38;
+			}
+			
+			else {
+				tile_array[i][j] = 47;
+			}
+			
+			
+		}
+	}
+}
 
 
 // TEMP
@@ -130,18 +252,26 @@ for (var _yy = 0; _yy < array_length(tile_array); _yy++)
     for (var _xx = 0; _xx < array_length(tile_array[0]); _xx++)
     {
         var _tile_index = tile_array[_yy][_xx];
-        if (_tile_index != -1)
-        {
-			if(_tile_index == 1) {
-				tilemap_set(_tilemap_id, 1, _xx, _yy);
-			} else if(_tile_index == 2) {
+		if(_tile_index != -1) {
+			tilemap_set(_tilemap_id, _tile_index, _xx, _yy);
+			/*
+			if(_tile_index < 48) {
+				tilemap_set(_tilemap_id, _tile_index, _xx, _yy);
+			} else if(_tile_index == 48) { // player spawn
 				obj_Player.x = _xx*128;
 				obj_Player.y = _yy*128;
 				tilemap_set(_tilemap_id, 47, _xx, _yy);
-			} else {
+			} else if(_tile_index == 49) { // exit point spawn
+				instance_create_layer(_xx*128, _yy*128, "Instances", obj_NextRoom);
+				tilemap_set(_tilemap_id, 47, _xx, _yy);
+			} else if(_tile_index == 50) { // chest spawn
+				instance_create_layer(_xx*128, _yy*128, "Instances", obj_Chest);
 				tilemap_set(_tilemap_id, 47, _xx, _yy);
 			}
-        }
+			*/
+		}else { // empty space
+			instance_create_layer(_xx*128, _yy*128, "Walls", obj_Wall);
+		}
     }
 }
 
@@ -167,10 +297,19 @@ function initRoom(rm_width, rm_height, level_width, level_height, tile_array) {
 		}
 	}
 	
+	var chest_count = rm_width*rm_height/4; // 1 chest per 4 spaces in a room
+	
 	// fill room tiles
 	for(var i = rm_x; i < rm_x + rm_width; i++) {
 		for(var j = rm_y; j < rm_y + rm_height; j++) {
-			tile_array[i][j] = 4;
+			if(chest_count > 0) {
+				var check = floor(random_range(1, 4));
+				if(check == 2) {
+					tile_array[i][j] = 50; // spawns chest
+				}
+			} else {
+				tile_array[i][j] = 4; // regular tile
+			}
 		}
 	}
 	

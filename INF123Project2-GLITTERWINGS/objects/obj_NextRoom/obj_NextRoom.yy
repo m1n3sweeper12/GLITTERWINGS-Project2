@@ -34,5 +34,5 @@
     "path":"sprites/spr_NextRoom/spr_NextRoom.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
