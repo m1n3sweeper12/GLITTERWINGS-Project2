@@ -30,7 +30,7 @@ if (_hor != 0 or _ver != 0)
 
 }
 
-move_and_collide(_hor*walk_speed, _ver*walk_speed, [obj_Wall,obj_EnemyParent,obj_Player], 4, 0, 0, walk_speed, walk_speed);
+move_and_collide(_hor*walk_speed, _ver*walk_speed, [obj_Wall,obj_EnemyParent/*,obj_Player*/], 4, 0, 0, walk_speed, walk_speed);
 
 if (cur_health_points <= 0)
 {

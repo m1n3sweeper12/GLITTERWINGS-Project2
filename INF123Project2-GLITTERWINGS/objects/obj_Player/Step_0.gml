@@ -1,12 +1,19 @@
 // commented this out to test collisions with just direction
 // direction = image_angle; // Set direction to whichever way the sprite is facing
 
+// player death
+if(cur_health_points <= 0) {
+	instance_destroy(self);
+	instance_destroy(obj_GameManager);
+	room_goto(Menu);
+}
 
 // Basic Movement
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
 // Collision with wall
+var tilemap_id = layer_tilemap_get_id("Tiles_1");
 move_and_collide(_hor * walk_speed, _ver * walk_speed, obj_Wall, 4, 0, 0, walk_speed, walk_speed);
 
 if (_hor != 0 or _ver != 0)
@@ -39,6 +46,7 @@ if (_hor != 0 or _ver != 0)
 		case 225: sprite_index = spriteIdleSouthWest;break;
 		case 315: sprite_index = spriteIdleSouthEast;break;
 	}
+	
 }
 
 //--------------------------------------------------------
